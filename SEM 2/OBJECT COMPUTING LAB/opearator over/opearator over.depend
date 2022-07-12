@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1615954815 source:z:\opearator over\sample.cpp
+	<iostream>
+
+1616045892 source:z:\opearator over\main.cpp
+	<iostream>
+	"operator.h"
+
+1616045959 z:\opearator over\operator.h
+	<iostream>
+

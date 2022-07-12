@@ -1,0 +1,22 @@
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+class ex
+{
+    int x;
+  
+    friend void fun(ex);
+};
+void fun(ex e)
+{
+    cout<<e.x;
+}
+
+int main()
+{   ex e1();
+   fun(e1);
+
+    return 0;
+}
