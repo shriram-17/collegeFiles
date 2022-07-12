@@ -1,1 +1,1 @@
-This Contains the Files of Sem 2,3,5.
+This Directory Contains the Files of Sem 2,3,5.
