@@ -1,0 +1,211 @@
+
+#include<iostream>
+using namespace std;
+typedef struct node
+{
+        int data;
+        node *link;
+}node;
+node*ptr,*start;
+void creation(int x=17)
+{
+        node*n=new node;
+        n->link=NULL;
+        n->data=x;
+        start=n;
+
+}
+
+void display()
+{
+        ptr=start;
+while(ptr!=NULL)
+{
+        cout<<ptr->data<<"->";
+        ptr=ptr->link;
+}
+cout<<endl;
+
+}
+void Deletion()
+{
+        ptr=start;
+        start=start->link;
+        delete ptr;
+
+}
+
+void search(int x)
+{
+        ptr=start;
+        while(ptr!=NULL)
+        {
+        if(ptr->data==x)
+        {
+        cout<<"Element Found"<<endl;
+        break;
+        }
+        else
+    {
+        ptr=ptr->link;
+        cout<<"Element Not Found";
+        }
+        }
+}
+int count()
+{       int count=0;
+        ptr=start;
+        while(ptr!=NULL)
+        {
+        count++;
+        ptr=ptr->link;
+        }
+
+        cout<<"No of the Elements :"<<count;
+        cout<<endl;
+}
+void Insertion_begin( )
+{
+        node *n=new node;
+        cout<<"Enter the Node ";
+        cin>>n->data;
+        n->link=start; start=n;
+
+}
+void Insertion_Mid(int pos,int x)
+{
+        ptr=start;
+        struct node*a=new node;
+        a->data=17;
+        a->link=NULL;
+        while(ptr!=NULL)
+        {
+        if(ptr->data=pos)
+        {
+        a->data=x;
+        a->link=ptr->link;
+        ptr->link=a;
+        break;
+        }
+        else
+        ptr=ptr->link;
+
+        }
+
+
+}
+void sum()
+{
+
+        int sum=0;
+        ptr=start;
+        while(ptr!=NULL)
+        {
+        sum=sum+ptr->data;
+        ptr=ptr->link;
+        }
+
+        cout<<"Sum="<<sum;
+
+}
+void deletionatlast()
+{
+node*last,*secondlast;
+if(start==NULL)
+{
+cout<<"no element is available";
+}
+}
+void sum()
+{
+
+        int sum=0;
+        ptr=start;
+        while(ptr!=NULL)
+        {
+        sum=sum+ptr->data;
+        ptr=ptr->link;
+        }
+
+        cout<<"Sum="<<sum;
+
+}
+void deletionatlast()
+{
+node*last,*secondlast;
+if(start==NULL)
+{
+cout<<"no element is available";
+}
+else
+{
+last=start;
+secondlast=start;
+while(last->link!=NULL)
+{
+secondlast=last;
+last=last->link;
+}
+if(last==start)
+{
+start=NULL;
+}
+else
+{
+secondlast->link=NULL;
+}
+}
+delete(last);
+
+}
+void insertionatlast(int x)
+{
+node*temp;
+node*n=new node;
+ if(n==NULL)
+{
+cout<<"Unable to allocate memory";
+
+}
+else
+{
+n->data=x;
+n->link=NULL;
+temp=start;
+while(temp!=NULL&&temp->link!=NULL)
+{
+temp=temp->link;
+}
+temp->link=n;
+cout<<"INSERTED SUCESSFULLY";
+}
+
+
+
+
+
+}
+int  main()
+{
+       creation();
+        display();
+        Insertion_begin();
+        display();
+        Insertion_begin();
+        //display();
+        //count();
+        //cout<<"Enter the Element to be searched";
+        //int a;
+        //cin>>a;
+        //search(a);
+        //Deletion();
+        display();
+        insertionatlast(7);
+        display();
+        /*count();
+        Insertion_Mid(1,2);
+        display();
+        sum();
+}
+
+
