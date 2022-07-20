@@ -11,9 +11,9 @@ public class main {
         System.out.println("Username is: " + userName);
 
         int Age = myObj.nextInt();  // Read user input
-        System.out.println("Username is: " + Age);
+        System.out.println("Salary is: " + Age);
         int Salary= myObj.nextInt();  // Read user input
-        System.out.println("Username is: " + Salary);
+        System.out.println("Salary is: " + Salary);
 
     }
 }
